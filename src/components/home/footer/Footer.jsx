@@ -1,13 +1,9 @@
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaLongArrowAltRight,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import DACA from "../../../assets/1.png";
+import BookButton from "../../shared/BookButton";
 import USA from "../../../assets/2.png";
 import USCIS from "../../../assets/3.png";
 
@@ -27,10 +23,7 @@ const Footer = () => {
               consultation and taking our immigration assessment quiz. You will
               be one step closer to getting your immigration case approved!
             </p>
-            <button className="flex items-center gap-5 bg-[#ec2028] hover:bg-[#ec2042] transition-all duration-300 ease-in-out text-white py-3 px-5 font-semibold">
-              <p>BOOK CONSULTATION</p>
-              <FaLongArrowAltRight />
-            </button>
+            <BookButton text={"BOOK CONSULTATION"} />
           </div>
           {/* single top right */}
           <div className="w-[100%] lg:w-[50%]">
@@ -135,7 +128,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      {/* Footer Copy Right */}
+      {/* Footer Copy Right */} 
       <div className="bg-[#f9f9f9] py-[20px]">
         <div className="container mx-auto flex flex-col sm:flex-row justify-start sm:justify-between gap-5">
           <p className="text-[#232323] text-[15px]">
