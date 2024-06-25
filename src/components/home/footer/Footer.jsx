@@ -112,7 +112,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      {/* Footer Copy Right */}
+      {/* Footer Copy Right */} 
       <div className="bg-[#f9f9f9] py-[20px]">
         <div className="container mx-auto flex flex-col sm:flex-row justify-start sm:justify-between gap-5">
           <p className="text-[#232323] text-[15px]">
