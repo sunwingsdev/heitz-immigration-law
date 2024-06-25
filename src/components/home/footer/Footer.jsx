@@ -1,13 +1,11 @@
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaLongArrowAltRight,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import DACA from "../../../assets/1.png";
+import BookButton from "../../shared/BookButton";
+import USA from "../../../assets/2.png";
+import USCIS from "../../../assets/3.png";
 
 const Footer = () => {
   return (
@@ -25,10 +23,7 @@ const Footer = () => {
               consultation and taking our immigration assessment quiz. You will
               be one step closer to getting your immigration case approved!
             </p>
-            <button className="flex items-center gap-5 bg-[#ec2028] hover:bg-[#ec2042] transition-all duration-300 ease-in-out text-white py-3 px-5 font-semibold">
-              <p>BOOK CONSULTATION</p>
-              <FaLongArrowAltRight />
-            </button>
+            <BookButton text={"BOOK CONSULTATION"} />
           </div>
           {/* single top right */}
           <div className="w-[100%] lg:w-[50%]">
@@ -58,8 +53,8 @@ const Footer = () => {
         </div>
       </div>
       {/* Footer Bottom */}
-      <div className="container mx-auto flex justify-between gap-5 my-20">
-        <div className="w-[35%]">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-5 my-20">
+        <div className="">
           <h4 className="text-[#204498] text-[21px] font-bold mb-2 lg:mb-5">
             Heitz Immigration Law
           </h4>
@@ -81,7 +76,7 @@ const Footer = () => {
             </p>
           </Link>
         </div>
-        <div className="w-[15%]">
+        <div className="">
           <h4 className="text-[#204498] text-[21px] font-bold mb-2">
             Site Links
           </h4>
@@ -96,30 +91,44 @@ const Footer = () => {
             <Link className="mb-3 hover:text-[#204498]">Video FAQ</Link>
           </div>
         </div>
-        <div className="w-[20%]">
+        <div className="">
           <h4 className="text-[#204498] text-[21px] font-bold mb-2">
             Latest Articles
           </h4>
-          <Link className="flex gap-2 text-[#353535] hover:text-[#abb8c3]">
-            <img src={DACA} alt="" />
+          <Link className="flex items-center gap-5 text-[#353535] hover:text-[#abb8c3] mb-6">
+            <img className="w-[80px] rounded" src={DACA} alt="" />
             <p className="text-base">
               Navigating DACA Renewal: Understanding Criminal Barriers,
               Historical Insights, and Today’s Challenges
             </p>
           </Link>
+          <Link className="flex items-center gap-5 text-[#353535] hover:text-[#abb8c3] mb-6">
+            <img className="w-[80px] rounded" src={USA} alt="" />
+            <p className="text-base">
+              Exploring the E-2 Investor Visa: Your Gateway to Business in the
+              USA
+            </p>
+          </Link>
+          <Link className="flex items-center gap-5 text-[#353535] hover:text-[#abb8c3] mb-6">
+            <img className="w-[80px] rounded" src={USCIS} alt="" />
+            <p className="text-base">
+              Submit Your USCIS Application Before April 1, 2024, To Avoid
+              Higher Immigration Fees:
+            </p>
+          </Link>
         </div>
-        <div className="w-[30%]">
+        <div className="">
           <h4 className="text-[#204498] text-[21px] font-bold mb-2">
             Legal Disclaimer
           </h4>
-          <p className="text-[16px] lg:text-[18px]">
+          <p className="text-[#353535] text-[16px] lg:text-[18px]">
             This website contains general information not to be considered as
             legal advice. If you have specific questions about any immigration
             matter, please contact us to book a consultation.
           </p>
         </div>
       </div>
-      {/* Footer Copy Right */}
+      {/* Footer Copy Right */} 
       <div className="bg-[#f9f9f9] py-[20px]">
         <div className="container mx-auto flex flex-col sm:flex-row justify-start sm:justify-between gap-5">
           <p className="text-[#232323] text-[15px]">
