@@ -1,4 +1,4 @@
-const Banner = () => {
+const SecondaryBanner = ({ title, text, typeWritter, mouse }) => {
   return (
     <div>
       <div className="relative h-[600px]">
@@ -11,10 +11,10 @@ const Banner = () => {
         <div className="absolute inset-0 bg-[#0a0a0a] opacity-70"></div>
         <div className="container mx-auto absolute bottom-32 left-0">
           <h2 className=" text-[40px] leading-[38px] lg:text-[80px] lg:leading-[75px] text-white font-bold mb-[25px]">
-            Heitz Immigration Law
+            {title}
           </h2>
           <p className="bg-[#204498] px-[1em] py-[.5em] inline-block text-white font-medium opacity-70">
-            Live & Work in the USA
+            {text}
           </p>
         </div>
       </div>
@@ -22,4 +22,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default SecondaryBanner;
