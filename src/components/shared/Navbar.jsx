@@ -50,7 +50,7 @@ const Navbar = () => {
             to="/"
             exact
           >
-            <li className="hover:text-[#204498]">Home</li>
+            <li className={`${!isSticky ? 'hover:text-white': 'hover:text-[#204498]'}`}>Home</li>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -60,7 +60,7 @@ const Navbar = () => {
             }
             to="/services"
           >
-            <li className="hover:text-[#204498]">Services</li>
+            <li className={`${!isSticky ? 'hover:text-white': 'hover:text-[#204498]'}`}>Services</li>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -70,7 +70,7 @@ const Navbar = () => {
             }
             to="/about"
           >
-            <li className="hover:text-[#204498]">About</li>
+            <li  className={`${!isSticky ? 'hover:text-white': 'hover:text-[#204498]'}`}>About</li>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -80,7 +80,7 @@ const Navbar = () => {
             }
             to="/testimonials"
           >
-            <li className="hover:text-[#204498]">Testimonials</li>
+            <li  className={`${!isSticky ? 'hover:text-white': 'hover:text-[#204498]'}`}>Testimonials</li>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -90,7 +90,7 @@ const Navbar = () => {
             }
             to="/video-faq"
           >
-            <li className="hover:text-[#204498]">Video FAQ</li>
+            <li  className={`${!isSticky ? 'hover:text-white': 'hover:text-[#204498]'}`}>Video FAQ</li>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -100,7 +100,7 @@ const Navbar = () => {
             }
             to="/podcast"
           >
-            <li className="hover:text-[#204498]">Podcast</li>
+            <li  className={`${!isSticky ? 'hover:text-white': 'hover:text-[#204498]'}`}>Podcast</li>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -110,7 +110,7 @@ const Navbar = () => {
             }
             to="/blog"
           >
-            <li className="hover:text-[#204498]">Blog</li>
+            <li  className={`${!isSticky ? 'hover:text-white': 'hover:text-[#204498]'}`}>Blog</li>
           </NavLink>
         </ul>
       </div>
