@@ -1,3 +1,5 @@
+import ServiceType from "../../../components/home/ServiceType/ServiceType";
+import Team from "../../../components/home/Team/Team";
 import SecondaryBanner from "../../../components/shared/SecondaryBanner";
 
 const About = () => {
@@ -8,7 +10,10 @@ const About = () => {
         text={
           "Here are just some ways that we can help you achieve your immigration goals."
         }
+        mouse={true}
       />
+      <Team />
+      <ServiceType />
     </div>
   );
 };
