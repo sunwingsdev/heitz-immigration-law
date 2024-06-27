@@ -1,5 +1,6 @@
 import ServiceType from "../../../components/home/ServiceType/ServiceType";
 import Team from "../../../components/home/Team/Team";
+import Testimonials from "../../../components/home/Testimonials/Testimonials";
 import SecondaryBanner from "../../../components/shared/SecondaryBanner";
 
 const About = () => {
@@ -14,6 +15,7 @@ const About = () => {
       />
       <Team />
       <ServiceType />
+      <Testimonials />
     </div>
   );
 };

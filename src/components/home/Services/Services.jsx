@@ -4,7 +4,7 @@ import ServiceCard from "../../shared/ServiceCard";
 const Services = () => {
   return (
     <div className="container mx-auto ">
-      <div className="relative bg-white mt-10 pb-[850px] space-y-12">
+      <div className="relative bg-white mt-10 md:pb-[850px] space-y-12">
         <div className="flex lg:flex-row flex-col justify-center items-center gap-16 relative">
           <div className="lg:w-1/2 h-96 absolute -top-20 left-0">
             <iframe
@@ -68,7 +68,7 @@ const Services = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 absolute -bottom-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:absolute md:-bottom-6">
           <ServiceCard />
           <ServiceCard />
           <ServiceCard />
