@@ -1,0 +1,49 @@
+/* videoSlider.css */
+
+/* Ensure the Swiper container takes full width and height */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Center slide text vertically and style the slide */
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Ensure iframe within slides are styled appropriately */
+  .swiper-slide iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Custom pagination styling */
+  .custom-pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Styling for pagination bullets */
+  .custom-pagination .swiper-pagination-bullet {
+    background: #007aff;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    opacity: 0.5; /* Less opaque for non-active bullets */
+    transition: opacity 0.3s, transform 0.3s; /* Smooth transition for state changes */
+  }
+  
+  /* Styling for active pagination bullet */
+  .custom-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.2); /* Slightly larger for active bullet */
+    background: #ff5722; /* Different color for active bullet */
+  }
+  

@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <Banner />
       <Services />
-      <Testimonials />
+      <Testimonials call={true} absolute={true} />
       <News />
     </div>
   );
