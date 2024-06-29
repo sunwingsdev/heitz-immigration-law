@@ -11,6 +11,9 @@ const About = () => {
         text={
           "Here are just some ways that we can help you achieve your immigration goals."
         }
+        image={
+          "https://heitzimmigrationlaw.com/wp-content/uploads/2023/03/Low-res-Outside-All-1-scaled.jpg"
+        }
         mouse={true}
       />
       <Team />

@@ -20,3 +20,12 @@ body {
     padding: 0 20px;
   }
 }
+
+/* ReviewSlider.css */
+.slick-center .review-card {
+  @apply bg-[#204498] text-white; /* Tailwind classes for center card */
+}
+
+.slick-center .review-card-bg {
+  @apply bg-[#204498]; /* Same background for the absolute div */
+}
