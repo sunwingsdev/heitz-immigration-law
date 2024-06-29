@@ -12,7 +12,7 @@ const VideoSlider = () => {
       <h2 className="text-[35px] leading-[38px] font-bold text-black max-w-[700px]">
         We are so proud of these testimonials from our clients, take a look!
       </h2>
-      <ExperienceButton />
+      <ExperienceButton text={"Let us know how your experience was with us"} />
       <div>
         <Swiper
           slidesPerView={2}

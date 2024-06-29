@@ -1,9 +1,9 @@
 import { HiArrowLongRight } from "react-icons/hi2";
 import { BsDashLg } from "react-icons/bs";
 import { useState } from "react";
-import "./ExperienceButton.css"; // Import the CSS file for keyframes
+import "./ExperienceButton.css";
 
-const ExperienceButton = () => {
+const ExperienceButton = ({ text }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -24,7 +24,7 @@ const ExperienceButton = () => {
           isHovered ? "translate-x-2" : ""
         }`}
       >
-        Let us know how your experience was with us
+        {text}
       </p>
     </div>
   );
