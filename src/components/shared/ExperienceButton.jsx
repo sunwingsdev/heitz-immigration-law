@@ -3,12 +3,14 @@ import { BsDashLg } from "react-icons/bs";
 import { useState } from "react";
 import "./ExperienceButton.css";
 
-const ExperienceButton = ({ text }) => {
+const ExperienceButton = ({ text, white }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className="inline-flex text-[#204498] flex-row items-center gap-2"
+      className={`inline-flex ${
+        white ? "text-white" : "text-[#204498]"
+      } flex-row items-center gap-2`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
