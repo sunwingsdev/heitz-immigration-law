@@ -9,7 +9,10 @@ const Banner = () => {
           alt=""
         />
         <div className="absolute inset-0 bg-[#0a0a0a] opacity-70"></div>
-        <div className="container mx-auto absolute bottom-32 left-0">
+        <div
+          div
+          className="container mx-auto absolute bottom-32 left-[5px] md:left-[30px] 2xl:left-[20%] inline-flex  flex-col justify-center items-start text-white"
+        >
           <h2 className=" text-[40px] leading-[38px] lg:text-[80px] lg:leading-[75px] text-white font-bold mb-[25px]">
             Heitz Immigration Law
           </h2>
