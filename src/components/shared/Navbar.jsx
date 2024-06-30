@@ -57,7 +57,7 @@ const Navbar = () => {
             <HiOutlineMenuAlt2 className="text-[#999]" />
           </li>
         </ul>
-        <ul className="hidden lg:flex flex-row gap-2 md:gap-4 text-[#999] text-sm lg:text-base xl:text-lg">
+        <ul className="hidden lg:flex flex-row gap-2 md:gap-4 text-[#d6d6d6] text-sm lg:text-base xl:text-lg">
           <NavLink
             className={({ isActive }) =>
               `${isActive && "text-[#204498]"} ${
