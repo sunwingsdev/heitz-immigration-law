@@ -45,7 +45,11 @@ const Navbar = () => {
       <div className="flex flex-row justify-between items-center container mx-auto">
         <img
           className="w-[200px]"
-          src="https://heitzimmigrationlaw.com/wp-content/uploads/2020/07/black.png"
+          src={
+            isSticky
+              ? "https://heitzimmigrationlaw.com/wp-content/uploads/2020/07/black.png"
+              : "https://heitzimmigrationlaw.com/wp-content/uploads/2020/07/white.png"
+          }
           alt="Logo"
         />
         <ul className="lg:hidden flex flex-row items-center justify-center gap-3 text-[#999]">
@@ -57,7 +61,7 @@ const Navbar = () => {
             <HiOutlineMenuAlt2 className="text-[#999]" />
           </li>
         </ul>
-        <ul className="hidden lg:flex flex-row gap-2 md:gap-4 text-[#999] text-sm lg:text-base xl:text-lg">
+        <ul className="hidden lg:flex flex-row gap-2 md:gap-4 text-[#d6d6d6] text-sm lg:text-base xl:text-lg">
           <NavLink
             className={({ isActive }) =>
               `${isActive && "text-[#204498]"} ${
@@ -170,12 +174,14 @@ const Navbar = () => {
               Blog
             </li>
           </NavLink>
-          <li
-            className="hover:bg-[#b90a18] bg-[#f10e21]
+          <Link to="/booking">
+            <li
+              className="hover:bg-[#b90a18] bg-[#f10e21]
             mx-auto lg:m-0 px-3 text-white rounded-[4px] opacity-90 uppercase"
-          >
-            Book consultation
-          </li>
+            >
+              Book consultation
+            </li>
+          </Link>
         </ul>
       </div>
 
@@ -218,7 +224,7 @@ const Navbar = () => {
               Services
             </li>
             {!menuCollapsed.services && (
-              <ul className="ml-4 space-y-2">
+              <ul className="ml-4 space-y-3">
                 <Link to="/services/green-card" onClick={toggleMobileMenu}>
                   <li className="hover:text-[#204498]">Green Card</li>
                 </Link>
@@ -315,9 +321,11 @@ const Navbar = () => {
                 Blog
               </li>
             </NavLink>
-            <li className="hover:bg-[#b90a18] bg-[#f10e21] lg:mx-auto lg:m-0 px-3 text-white rounded-[4px] opacity-90 uppercase">
-              Book consultation
-            </li>
+            <Link to="/booking">
+              <li className="hover:bg-[#b90a18] bg-[#f10e21] lg:mx-auto lg:m-0 px-3 text-white rounded-[4px] opacity-90 uppercase">
+                Book consultation
+              </li>
+            </Link>
           </ul>
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 import BookButton from "../../shared/BookButton";
 
 const DownloadPdf = ({ absolute }) => {
@@ -6,7 +5,7 @@ const DownloadPdf = ({ absolute }) => {
     <div
       className={`${
         absolute ? "md:absolute -mb-[200px]" : "py-8"
-      } bottom-0 left-0 right-0 z-20 flex justify-center text-center items-center bg-[#f6f2f2] max-w-[67rem] mx-auto`}
+      } bottom-0 left-0 right-0 z-20 flex justify-center text-center items-center bg-[#f7f7f7] max-w-[67rem] mx-auto`}
     >
       <div className="flex flex-col items-center justify-center gap-2 p-12">
         <p className="text-[21px] leading-[28px] font-semibold text-black">
