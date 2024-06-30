@@ -10,7 +10,7 @@ const Services = () => {
           <div className="lg:w-1/2 h-96 absolute -top-20 left-0">
             <iframe
               className="w-full h-full rounded-lg"
-              src="https://www.youtube.com/embed/CUU2qsdfB4Q?si=dyq94UuWBzMzEARf"
+              src="https://player.vimeo.com/video/276157241?dnt=1&app_id=122963"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
