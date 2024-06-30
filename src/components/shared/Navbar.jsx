@@ -170,12 +170,14 @@ const Navbar = () => {
               Blog
             </li>
           </NavLink>
-          <li
-            className="hover:bg-[#b90a18] bg-[#f10e21]
+          <Link to="/booking">
+            <li
+              className="hover:bg-[#b90a18] bg-[#f10e21]
             mx-auto lg:m-0 px-3 text-white rounded-[4px] opacity-90 uppercase"
-          >
-            Book consultation
-          </li>
+            >
+              Book consultation
+            </li>
+          </Link>
         </ul>
       </div>
 
@@ -315,9 +317,11 @@ const Navbar = () => {
                 Blog
               </li>
             </NavLink>
-            <li className="hover:bg-[#b90a18] bg-[#f10e21] lg:mx-auto lg:m-0 px-3 text-white rounded-[4px] opacity-90 uppercase">
-              Book consultation
-            </li>
+            <Link to="/booking">
+              <li className="hover:bg-[#b90a18] bg-[#f10e21] lg:mx-auto lg:m-0 px-3 text-white rounded-[4px] opacity-90 uppercase">
+                Book consultation
+              </li>
+            </Link>
           </ul>
         </div>
       </div>
