@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BookButton from "../../shared/BookButton";
 import ServiceCard from "../../shared/ServiceCard";
 
@@ -31,7 +32,9 @@ const Services = () => {
             <p className="text-[14px] leading-[16px] font-semibold tracking-widest">
               Nadine Heitz, Immigration Attorney
             </p>
-            <BookButton text={"BOOK CONSULTATION"} />
+            <Link to="/booking">
+              <BookButton text={"BOOK CONSULTATION"} />
+            </Link>
           </div>
         </div>
         <div className="flex lg:flex-row flex-col justify-center items-start gap-16">
