@@ -45,7 +45,11 @@ const Navbar = () => {
       <div className="flex flex-row justify-between items-center container mx-auto">
         <img
           className="w-[200px]"
-          src="https://heitzimmigrationlaw.com/wp-content/uploads/2020/07/black.png"
+          src={
+            isSticky
+              ? "https://heitzimmigrationlaw.com/wp-content/uploads/2020/07/black.png"
+              : "https://heitzimmigrationlaw.com/wp-content/uploads/2020/07/white.png"
+          }
           alt="Logo"
         />
         <ul className="lg:hidden flex flex-row items-center justify-center gap-3 text-[#999]">
