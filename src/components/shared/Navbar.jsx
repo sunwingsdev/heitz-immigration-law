@@ -43,15 +43,17 @@ const Navbar = () => {
       }`}
     >
       <div className="flex flex-row justify-between items-center container mx-auto">
-        <img
-          className="w-[200px]"
-          src={
-            isSticky
-              ? "https://heitzimmigrationlaw.com/wp-content/uploads/2020/07/black.png"
-              : "https://heitzimmigrationlaw.com/wp-content/uploads/2020/07/white.png"
-          }
-          alt="Logo"
-        />
+        <Link to="/">
+          <img
+            className="w-[200px]"
+            src={
+              isSticky
+                ? "https://heitzimmigrationlaw.com/wp-content/uploads/2020/07/color-2.png"
+                : "https://heitzimmigrationlaw.com/wp-content/uploads/2020/07/white.png"
+            }
+            alt="Logo"
+          />
+        </Link>
         <ul className="lg:hidden flex flex-row items-center justify-center gap-3 text-[#999]">
           <li>Menu</li>
           <li

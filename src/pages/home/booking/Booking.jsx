@@ -1,3 +1,4 @@
+import BookingConsultation from "../../../components/home/BookingConsultation/BookingConsultation";
 import ScheduleAnImmigration from "../../../components/home/ScheduleAnImmigration/ScheduleAnImmigration";
 import CallAndLocation from "../../../components/home/callAndLocation/CallAndLocation";
 import ContactUs from "../../../components/home/contactUs/ContactUs";
@@ -18,6 +19,7 @@ const Booking = () => {
       <div className="container mx-auto">
         <ScheduleAnImmigration />
         <ContactUs />
+        <BookingConsultation />
         <CallAndLocation />
       </div>
     </div>
