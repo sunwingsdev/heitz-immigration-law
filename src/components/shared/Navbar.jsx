@@ -220,7 +220,7 @@ const Navbar = () => {
               Services
             </li>
             {!menuCollapsed.services && (
-              <ul className="ml-4 space-y-2">
+              <ul className="ml-4 space-y-3">
                 <Link to="/services/green-card" onClick={toggleMobileMenu}>
                   <li className="hover:text-[#204498]">Green Card</li>
                 </Link>

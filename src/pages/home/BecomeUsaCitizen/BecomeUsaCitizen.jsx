@@ -1,4 +1,5 @@
 import DownloadPdf from "../../../components/home/DownloadPdf/DownloadPdf";
+import Faq from "../../../components/home/Faq/Faq";
 import GreenCardHolder from "../../../components/home/GreenCardHolder/GreenCardHolder";
 import BookingImmigration from "../../../components/shared/BookingImmigration";
 import SecondaryBanner from "../../../components/shared/SecondaryBanner";
@@ -21,6 +22,7 @@ const BecomeUsaCitizen = () => {
         }
       />
       <GreenCardHolder />
+      <Faq />
       <DownloadPdf />
     </div>
   );
