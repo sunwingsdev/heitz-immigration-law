@@ -29,7 +29,7 @@ const Services = () => {
               Don&apos;t hesitate, call now to learn more about your eligibility
               for immigration options.
             </p>
-            <p className="text-[14px] leading-[16px] font-semibold tracking-widest">
+            <p className="text-[14px] leading-[16px] pb-2 font-semibold tracking-widest">
               Nadine Heitz, Immigration Attorney
             </p>
             <Link to="/booking">
