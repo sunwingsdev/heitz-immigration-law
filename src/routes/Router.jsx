@@ -7,6 +7,7 @@ import TestimonialsPage from "../pages/home/TestimonialsPage/TestimonialsPage";
 import Podcast from "../pages/home/podcast/Podcast";
 import GreenCardServices from "../pages/home/GreenCardServices/GreenCardServices";
 import BecomeUsaCitizen from "../pages/home/BecomeUsaCitizen/BecomeUsaCitizen";
+import VideoFaq from "../pages/home/videoFaq/VideoFaq";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/podcast",
         element: <Podcast />,
+      },
+      {
+        path: "/video-faq",
+        element: <VideoFaq />,
       },
     ],
   },
