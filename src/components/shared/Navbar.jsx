@@ -66,7 +66,7 @@ const Navbar = () => {
         <ul
           className={`hidden lg:flex flex-row gap-2 md:gap-4 ${
             isSticky ? "text-[#999]" : "text-[#d6d6d6]"
-          } text-sm lg:text-base xl:text-lg`}
+          } text-sm lg:text-base xl:text-md`}
         >
           <NavLink
             className={({ isActive }) =>
@@ -170,14 +170,14 @@ const Navbar = () => {
                 isActive && !isSticky && "text-white"
               }`
             }
-            to="/blog"
+            to="/dashboard"
           >
             <li
               className={`${
                 !isSticky ? "hover:text-white" : "hover:text-[#204498]"
               }`}
             >
-              Blog
+              Dashboard
             </li>
           </NavLink>
           <Link to="/booking">
@@ -316,7 +316,7 @@ const Navbar = () => {
                   isActive && !isSticky && "text-[#204498]"
                 }`
               }
-              to="/blog"
+              to="/dashboard"
               onClick={toggleMobileMenu}
             >
               <li
@@ -324,7 +324,7 @@ const Navbar = () => {
                   !isSticky ? "hover:text-[#204498]" : "hover:text-[#204498]"
                 }`}
               >
-                Blog
+                Dashboard
               </li>
             </NavLink>
             <Link to="/booking">

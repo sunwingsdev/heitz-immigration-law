@@ -6,13 +6,16 @@ import router from "./routes/Router.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
 import { ToastProvider } from "react-toast-notifications";
+import AuthProvider from "./providers/AuthProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Provider store={store}>
-      <ToastProvider>
-        <RouterProvider router={router} />
-      </ToastProvider>
-    </Provider>
+    <AuthProvider>
+      <Provider store={store}>
+        <ToastProvider>
+          <RouterProvider router={router} />
+        </ToastProvider>
+      </Provider>
+    </AuthProvider>
   </React.StrictMode>
 );
