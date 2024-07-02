@@ -14,6 +14,7 @@ import DashboardHome from "../pages/dashboard/dashboardHome/DashboardHome";
 import DashboardBooking from "../pages/dashboard/dashboardBooking/DashboardBooking";
 import Login from "../pages/Login&Registration/Login";
 import Registration from "../pages/Login&Registration/Registration";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -60,7 +61,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <DashboardLayout />,
+    element: (
+      <PrivateRoute>
+        <DashboardLayout />
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "",

@@ -1,11 +1,12 @@
 import moment from "moment";
 import { useGetBookingsQuery } from "../../../redux/features/allApis/bookingApi/bookingApi";
+import Loader from "../../../components/shared/Loader";
 
 const DashboardBooking = () => {
   const { data: bookings, isLoading } = useGetBookingsQuery();
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
   return (
     <div className="p-6">
