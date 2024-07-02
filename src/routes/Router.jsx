@@ -12,6 +12,8 @@ import Blog from "../pages/home/blog/Blog";
 import DashboardLayout from "../layout/DashboardLayout";
 import DashboardHome from "../pages/dashboard/dashboardHome/DashboardHome";
 import DashboardBooking from "../pages/dashboard/dashboardBooking/DashboardBooking";
+import Login from "../pages/Login&Registration/Login";
+import Registration from "../pages/Login&Registration/Registration";
 
 const router = createBrowserRouter([
   {
@@ -69,6 +71,14 @@ const router = createBrowserRouter([
         element: <DashboardBooking />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/registration",
+    element: <Registration />,
   },
 ]);
 
