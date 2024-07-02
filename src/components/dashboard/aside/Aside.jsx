@@ -1,8 +1,29 @@
+import { useContext } from "react";
 import { FaHome } from "react-icons/fa";
 import { TbBrandBooking } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
+import { useToasts } from "react-toast-notifications";
+import { RiLogoutCircleLine } from "react-icons/ri";
 
 const Aside = () => {
+  const { logOut } = useContext(AuthContext);
+  const { addToast } = useToasts();
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        addToast("Successfully Logged Out!", {
+          appearance: "success",
+          autoDismiss: true,
+        });
+      })
+      .catch((error) => {
+        addToast(error.message, {
+          appearance: "error",
+          autoDismiss: true,
+        });
+      });
+  };
   return (
     <div className="bg-[#333] pt-4 pb-8 h-screen">
       <div className="px-5 pb-11">
@@ -27,12 +48,14 @@ const Aside = () => {
             Bookings
           </p>
         </Link>
-        <Link>
-          <p className="flex items-center gap-2 py-2 pl-6 pr-3 rounded hover:bg-slate-600">
-            <FaHome />
-            Home
-          </p>
-        </Link>
+
+        <p
+          onClick={handleLogout}
+          className="flex items-center gap-2 py-2 pl-6 pr-3 rounded hover:bg-slate-600"
+        >
+          <RiLogoutCircleLine />
+          Logout
+        </p>
       </div>
     </div>
   );
