@@ -1,6 +1,6 @@
 const DashboardBooking = () => {
   return (
-    <div className="py-6 px-6">
+    <div className="p-6">
       <h2 className="text-4xl font-bold mb-6">Booking Info :-</h2>
       <div className="py-4 bg-slate-100 border">
         <div className="overflow-x-auto">
