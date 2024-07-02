@@ -1,8 +1,8 @@
 import { FaCar } from "react-icons/fa";
-import { FaArrowRightLong } from "react-icons/fa6";
 import { IoCall, IoLocationSharp } from "react-icons/io5";
 import { SlCalender } from "react-icons/sl";
 import { Link } from "react-router-dom";
+import ExperienceButton from "../../shared/ExperienceButton";
 
 const CallAndLocation = () => {
   return (
@@ -13,10 +13,7 @@ const CallAndLocation = () => {
             <IoCall /> Give us a call
           </h4>
           <Link>
-            <h2 className="text-4xl text-white mb-4 flex gap-3 items-center">
-              <FaArrowRightLong size={20} />
-              561-290-0101
-            </h2>
+            <ExperienceButton white={true} text={"561-290-0101"} />
           </Link>
           <p className="text-base text-white mb-4">
             We speak <span className="font-semibold">English & Spanish</span>
@@ -31,15 +28,11 @@ const CallAndLocation = () => {
             <p>Come see us in Lake Worth Beach</p>
           </div>
           <Link>
-            <h4 className="mb-8 text-lg text-blue-800 font-semibold flex gap-3 items-center">
-              <FaArrowRightLong />
-              32 South J Street, Lake Worth Beach
-            </h4>
+            <ExperienceButton text={"32 South J Street, Lake Worth Beach"} />
           </Link>
           <p className="text-base text-black">
             Office Hours <span className="font-semibold">Monday</span> to{" "}
-            <span className="font-semibold">Friday</span>
-            9:00am – 5:00pm
+            <span className="font-semibold">Friday </span> 9:00am – 5:00pm
           </p>
         </div>
       </div>
