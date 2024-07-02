@@ -1,4 +1,12 @@
+import moment from "moment";
+import { useGetBookingsQuery } from "../../../redux/features/allApis/bookingApi/bookingApi";
+
 const DashboardBooking = () => {
+  const { data: bookings, isLoading } = useGetBookingsQuery();
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="p-6">
       <h2 className="text-4xl font-bold mb-6">Booking Info :-</h2>
@@ -7,52 +15,57 @@ const DashboardBooking = () => {
           <table className="table">
             <thead className="text-base">
               <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Job</th>
-                <th>company</th>
-                <th>location</th>
-                <th>Last Login</th>
-                <th>Favorite Color</th>
+                <th>S.n.</th>
+                <th>Name & Email</th>
+                <th>Number & Location</th>
+                <th className="min-w-60">Date & Time</th>
+                <th>Comments</th>
+                <th>Status</th>
+                <th></th>
               </tr>
             </thead>
             <tbody className="text-base">
-              <tr>
-                <th>1</th>
-                <td>Cy Ganderton</td>
-                <td>Quality Control Specialist</td>
-                <td>Littel, Schaden and Vandervort</td>
-                <td>Canada</td>
-                <td>12/16/2020</td>
-                <td>Blue</td>
-              </tr>
-              <tr>
-                <th>2</th>
-                <td>Hart Hagerty</td>
-                <td>Desktop Support Technician</td>
-                <td>Zemlak, Daniel and Leannon</td>
-                <td>United States</td>
-                <td>12/5/2020</td>
-                <td>Purple</td>
-              </tr>
-              <tr>
-                <th>3</th>
-                <td>Brice Swyre</td>
-                <td>Tax Accountant</td>
-                <td>Carroll Group</td>
-                <td>China</td>
-                <td>8/15/2020</td>
-                <td>Red</td>
-              </tr>
-              <tr>
-                <th>4</th>
-                <td>Marjy Ferencz</td>
-                <td>Office Assistant I</td>
-                <td>Rowe-Schoen</td>
-                <td>Russia</td>
-                <td>3/25/2021</td>
-                <td>Crimson</td>
-              </tr>
+              {bookings?.length ? (
+                bookings.map(
+                  (
+                    {
+                      _id,
+                      name,
+                      email,
+                      number,
+                      location,
+                      selectedDate,
+                      selectedSlot,
+                      comments,
+                      status,
+                    },
+                    i
+                  ) => (
+                    <tr key={_id}>
+                      <th>{i + 1}</th>
+                      <td className="flex flex-col">
+                        <span className="capitalize">{name}</span>{" "}
+                        <span>{email}</span>
+                      </td>
+                      <td>
+                        <span>{number}</span>, <span>{location}</span>
+                      </td>
+                      <td>
+                        {moment(selectedDate).format("MMMM Do YYYY")} at{" "}
+                        {selectedSlot}
+                      </td>
+                      <td>{comments}</td>
+                      <td>{status}</td>
+                    </tr>
+                  )
+                )
+              ) : (
+                <tr>
+                  <td colSpan="7" className="text-center">
+                    No bookings
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>

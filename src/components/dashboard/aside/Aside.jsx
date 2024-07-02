@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Aside = () => {
   return (
-    <div className="bg-[#333] pt-4 pb-8">
+    <div className="bg-[#333] pt-4 pb-8 h-screen">
       <div className="px-5 pb-11">
         <Link to="/">
           <img

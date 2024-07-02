@@ -29,3 +29,13 @@ body {
 .slick-center .review-card-bg {
   @apply bg-[#204498]; /* Same background for the absolute div */
 }
+/* src/components/BookingCalendar.css */
+.react-calendar {
+  width: 100% !important;
+  border: none;
+  padding: 0;
+}
+
+.react-calendar__tile {
+  max-width: initial !important;
+}

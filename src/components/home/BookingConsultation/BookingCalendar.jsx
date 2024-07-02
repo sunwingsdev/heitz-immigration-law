@@ -13,9 +13,10 @@ const BookingCalendar = ({ onDateChange }) => {
   };
 
   return (
-    <div>
+    <div className="w-full space-y-3">
+      <h2 className="text-xl font-bold">Select a Date & Time</h2>
       <Calendar onChange={handleDateChange} value={date} />
-      <p>Selected Date: {format(date, "PPP")}</p>
+      <p className="">Selected Date: {format(date, "PPP")}</p>
     </div>
   );
 };
