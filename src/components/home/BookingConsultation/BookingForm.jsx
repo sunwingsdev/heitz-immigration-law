@@ -67,7 +67,8 @@ const BookingForm = ({ selectedDate, selectedSlot, onSubmit }) => {
       </div>
       <div className="mb-4">
         <label className="block mb-1">
-          Please share anything that will help prepare for our meeting.
+          Please share anything that will help prepare for our meeting(country,
+          visa processing, details etc.).
         </label>
         <textarea
           className="w-full p-2 border rounded"

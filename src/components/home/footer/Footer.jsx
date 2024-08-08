@@ -23,7 +23,9 @@ const Footer = () => {
               consultation and taking our immigration assessment quiz. You will
               be one step closer to getting your immigration case approved!
             </p>
-            <BookButton text={"BOOK CONSULTATION"} />
+            <Link to="/booking">
+              <BookButton text={"BOOK CONSULTATION"} />
+            </Link>
           </div>
           {/* single top right */}
           <div className="w-[100%] lg:w-[50%]">
@@ -128,7 +130,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      {/* Footer Copy Right */} 
+      {/* Footer Copy Right */}
       <div className="bg-[#f9f9f9] py-[20px]">
         <div className="container mx-auto flex flex-col sm:flex-row justify-start sm:justify-between gap-5">
           <p className="text-[#232323] text-[15px]">

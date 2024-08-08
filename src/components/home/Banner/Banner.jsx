@@ -9,11 +9,11 @@ const Banner = () => {
           alt=""
         />
         <div className="absolute inset-0 bg-[#0a0a0a] opacity-50"></div>
-        <div className="container mx-auto absolute bottom-32 left-[5px] md:left-[30px] 2xl:left-[20%] inline-flex  flex-col justify-center items-start text-white">
-          <h2 className=" text-[40px] leading-[38px] lg:text-[80px] lg:leading-[75px] text-white font-bold mb-[25px]">
-            Heitz Immigration Law
+        <div className="container mx-auto absolute bottom-32 left-1/2 transform -translate-x-1/2 flex flex-col justify-center items-center text-white">
+          <h2 className="text-[40px] leading-[38px] lg:text-[80px] lg:leading-[75px] text-white font-bold mb-[25px] text-center">
+            Heitz USA Law
           </h2>
-          <p className="bg-[#204498] px-[1em] py-[.5em] inline-block text-white font-medium opacity-70">
+          <p className="bg-[#204498] px-[1em] py-[.5em] inline-block text-white font-medium opacity-70 text-center">
             Live & Work in the USA
           </p>
         </div>
