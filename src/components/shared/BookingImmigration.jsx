@@ -1,4 +1,5 @@
 import BookButton from "./BookButton";
+import { Link } from "react-router-dom";
 
 const BookingImmigration = ({ title, details }) => {
   return (
@@ -16,7 +17,9 @@ const BookingImmigration = ({ title, details }) => {
         <p className="text-[16px] lg:text-[20px] text-black leading-[1.6em]">
           {details}
         </p>
-        <BookButton text={"BOOK CONSULTATION"} />
+        <Link to='/booking'>
+          <BookButton text={"BOOK CONSULTATION"} />
+        </Link>
       </div>
     </div>
   );
