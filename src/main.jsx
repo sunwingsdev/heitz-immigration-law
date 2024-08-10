@@ -7,15 +7,18 @@ import { Provider } from "react-redux";
 import store from "./redux/store.js";
 import { ToastProvider } from "react-toast-notifications";
 import AuthProvider from "./providers/AuthProvider.jsx";
+import { ScrollProvider } from "./providers/ScrollProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
-      <Provider store={store}>
-        <ToastProvider>
-          <RouterProvider router={router} />
-        </ToastProvider>
-      </Provider>
+      <ScrollProvider>
+        <Provider store={store}>
+          <ToastProvider>
+            <RouterProvider router={router} />
+          </ToastProvider>
+        </Provider>
+      </ScrollProvider>
     </AuthProvider>
   </React.StrictMode>
 );

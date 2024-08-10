@@ -1,13 +1,27 @@
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import DACA from "../../../assets/1.png";
 import BookButton from "../../shared/BookButton";
 import USA from "../../../assets/2.png";
 import USCIS from "../../../assets/3.png";
+import { useContext } from "react";
+import { ScrollContext } from "../../../providers/ScrollProvider";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const { targetRef } = useContext(ScrollContext);
+
+  const handleScroll = () => {
+    // Navigate to /booking and then scroll to targetRef
+    navigate("/booking");
+    setTimeout(() => {
+      if (targetRef.current) {
+        targetRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 0);
+  };
   return (
     <div className="">
       {/* Footer Top  */}
@@ -23,9 +37,9 @@ const Footer = () => {
               consultation and taking our immigration assessment quiz. You will
               be one step closer to getting your immigration case approved!
             </p>
-            <Link to="/booking">
+            <div onClick={handleScroll}>
               <BookButton text={"BOOK CONSULTATION"} />
-            </Link>
+            </div>
           </div>
           {/* single top right */}
           <div className="w-[100%] lg:w-[50%]">
@@ -83,14 +97,31 @@ const Footer = () => {
             Site Links
           </h4>
           <div className="flex flex-col">
-            <Link className="mb-3 hover:text-[#204498]">Contact us</Link>
-            <Link className="mb-3 hover:text-[#204498]">Green Card</Link>
-            <Link className="mb-3 hover:text-[#204498]">Work USA</Link>
-            <Link className="mb-3 hover:text-[#204498]">Invest USA</Link>
-            <Link className="mb-3 hover:text-[#204498]">Testimonials</Link>
-            <Link className="mb-3 hover:text-[#204498]">Podcast</Link>
-            <Link className="mb-3 hover:text-[#204498]">About</Link>
-            <Link className="mb-3 hover:text-[#204498]">Video FAQ</Link>
+            <Link
+              to="/services/green-card"
+              className="mb-3 hover:text-[#204498]"
+            >
+              Green Card
+            </Link>
+
+            <Link
+              to="/services/become-usa-citizen"
+              className="mb-3 hover:text-[#204498]"
+            >
+              Become a USA Citizen
+            </Link>
+            <Link to="/testimonials" className="mb-3 hover:text-[#204498]">
+              Testimonials
+            </Link>
+            <Link to="/podcast" className="mb-3 hover:text-[#204498]">
+              Podcast
+            </Link>
+            <Link to="/about" className="mb-3 hover:text-[#204498]">
+              About
+            </Link>
+            <Link to="/video-faq" className="mb-3 hover:text-[#204498]">
+              Video FAQ
+            </Link>
           </div>
         </div>
         <div className="">

@@ -6,7 +6,7 @@ const Testimonials = ({ call, absolute }) => {
     <div className="relative">
       <div className="relative -z-10">
         <img
-          src="https://heitzimmigrationlaw.com/wp-content/uploads/2020/08/g8.jpg"
+          src="https://res.cloudinary.com/dahcyec9i/image/upload/v1723272402/Banner3_hll8lq.jpg"
           alt=""
           className="w-full h-[300px] md:h-auto"
         />

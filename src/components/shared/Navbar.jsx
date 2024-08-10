@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
+import { ScrollContext } from "../../providers/ScrollProvider";
 
 const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
@@ -9,6 +10,10 @@ const Navbar = () => {
   const [menuCollapsed, setMenuCollapsed] = useState({
     services: true,
   });
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { targetRef } = useContext(ScrollContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +39,23 @@ const Navbar = () => {
     }));
   };
 
+  const handleScroll = () => {
+    if (location.pathname === "/booking") {
+      // If already on the /booking page, scroll to the targetRef
+      if (targetRef.current) {
+        targetRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Navigate to /booking and then scroll to targetRef
+      navigate("/booking");
+      setTimeout(() => {
+        if (targetRef.current) {
+          targetRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 0); // Scroll after navigation
+    }
+  };
+
   return (
     <div
       className={`w-full z-50 py-4 ${
@@ -48,8 +70,8 @@ const Navbar = () => {
             className="w-[200px]"
             src={
               isSticky
-                ? "https://heitzimmigrationlaw.com/wp-content/uploads/2020/07/color-2.png"
-                : "https://heitzimmigrationlaw.com/wp-content/uploads/2020/07/white.png"
+                ? "https://res.cloudinary.com/dahcyec9i/image/upload/v1723272113/LOGOi_emhogb.png"
+                : "https://res.cloudinary.com/dahcyec9i/image/upload/v1723272113/LOGOi_emhogb.png"
             }
             alt="Logo"
           />
@@ -180,14 +202,13 @@ const Navbar = () => {
               Dashboard
             </li>
           </NavLink>
-          <Link to="/booking">
-            <li
-              className="hover:bg-[#b90a18] bg-[#f10e21]
+          <li
+            onClick={handleScroll}
+            className="hover:bg-[#b90a18] bg-[#f10e21]
             mx-auto lg:m-0 px-3 text-white rounded-[4px] opacity-90 uppercase"
-            >
-              Book consultation
-            </li>
-          </Link>
+          >
+            Book consultation
+          </li>
         </ul>
       </div>
 
@@ -327,11 +348,15 @@ const Navbar = () => {
                 Dashboard
               </li>
             </NavLink>
-            <Link to="/booking">
-              <li className="hover:bg-[#b90a18] bg-[#f10e21] lg:mx-auto lg:m-0 px-3 text-white rounded-[4px] opacity-90 uppercase">
-                Book consultation
-              </li>
-            </Link>
+            <li
+              onClick={() => {
+                handleScroll();
+                toggleMobileMenu();
+              }}
+              className="bg-[#f10e21] px-3 text-white rounded-[4px] opacity-90 uppercase"
+            >
+              Book consultation
+            </li>
           </ul>
         </div>
       </div>

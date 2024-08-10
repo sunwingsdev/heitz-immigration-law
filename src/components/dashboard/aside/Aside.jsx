@@ -89,7 +89,7 @@ const Aside = () => {
         <Link to="/">
           <img
             className="w-48"
-            src="https://heitzimmigrationlaw.com/wp-content/uploads/2020/07/white.png"
+            src="https://res.cloudinary.com/dahcyec9i/image/upload/v1723272113/LOGOi_emhogb.png"
             alt="Logo"
           />
         </Link>
